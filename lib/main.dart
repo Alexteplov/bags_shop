@@ -6,7 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +18,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  //HomePage({Key key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -31,7 +28,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        brightness: Brightness.light,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
@@ -76,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.search, color: Colors.black87),
-                          hintText: 'То, что ищещь ищет тебя',
+                          hintText: 'То, что ищешь, тоже ищет тебя.',
                           hintStyle:
                               TextStyle(color: Colors.grey, fontSize: 15),
                         ),
