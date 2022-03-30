@@ -1,5 +1,7 @@
+import 'package:bags_shop/generated/l10n.dart';
 import 'package:bags_shop/promoCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,6 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       title: 'Bugs shop',
       theme: ThemeData(fontFamily: 'Roboto'),
@@ -54,7 +63,8 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Экслюзивная коллекция женских сумочек',
+                      //'Экслюзивная коллекция женских сумочек',
+                      S.of(context).titleCollection,
                       style: TextStyle(
                         fontFamily: 'Pacifico',
                         color: Colors.black87,
@@ -72,7 +82,9 @@ class _HomePageState extends State<HomePage> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.search, color: Colors.black87),
-                          hintText: 'То, что ищешь, тоже ищет тебя.',
+                          hintText: S
+                              .of(context)
+                              .hintText, //'То, что ищешь, тоже ищет тебя.',
                           hintStyle:
                               TextStyle(color: Colors.grey, fontSize: 15),
                         ),
@@ -93,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Промо - акция дня!',
+                      S.of(context).promo, //'Промо - акция дня!',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
