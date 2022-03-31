@@ -12,12 +12,11 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        iconTheme: Theme.of(context).iconTheme,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.menu,
-            color: Colors.black87,
           ),
           onPressed: () {},
         ),
@@ -41,11 +40,7 @@ class _MainScreenState extends State<MainScreen> {
                     Text(
                       //'Экслюзивная коллекция женских сумочек',
                       S.of(context).titleCollection,
-                      style: TextStyle(
-                        fontFamily: 'Pacifico',
-                        color: Colors.black87,
-                        fontSize: 22,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                     SizedBox(height: 20),
                     Container(
@@ -82,10 +77,7 @@ class _MainScreenState extends State<MainScreen> {
                   children: [
                     Text(
                       S.of(context).promo, //'Промо - акция дня!',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Pacifico'),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                     SizedBox(
                       height: 15,
@@ -133,11 +125,8 @@ class _MainScreenState extends State<MainScreen> {
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
                             child: Text(
-                              'Best of the Best',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontFamily: 'Pacifico'),
+                              S.of(context).theBest,
+                              style: Theme.of(context).textTheme.headline5,
                             ),
                           ),
                         ),

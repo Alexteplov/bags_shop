@@ -50,31 +50,41 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Экслюзивная коллекция женских сумочек`
+  /// `Exclusive collection of women's handbags`
   String get titleCollection {
     return Intl.message(
-      'Экслюзивная коллекция женских сумочек',
+      'Exclusive collection of women\'s handbags',
       name: 'titleCollection',
       desc: '',
       args: [],
     );
   }
 
-  /// `То, что ищешь, тоже ищет тебя.`
+  /// `What you're looking for is also looking for you`
   String get hintText {
     return Intl.message(
-      'То, что ищешь, тоже ищет тебя.',
+      'What you\'re looking for is also looking for you',
       name: 'hintText',
       desc: '',
       args: [],
     );
   }
 
-  /// `Промо - акция дня!`
+  /// `Promo action of the day!`
   String get promo {
     return Intl.message(
-      'Промо - акция дня!',
+      'Promo action of the day!',
       name: 'promo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best of the best`
+  String get theBest {
+    return Intl.message(
+      'Best of the best',
+      name: 'theBest',
       desc: '',
       args: [],
     );
@@ -87,6 +97,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ru'),
     ];
   }
 

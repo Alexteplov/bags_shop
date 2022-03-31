@@ -1,9 +1,7 @@
-# bags_shop
-
-A new Flutter App. A promo bags shop.
-
+# A promo bags shop written on Flutter
+### clean architecture, localization, fonts
 @ru 
-Промо магазин сумочек на Flutter.
+Промо - страница магазина сумочек на Flutter.
 ## ScreenShot
 
 <img src="assets/screenshot/main_menu.jpg" height="500em" />
